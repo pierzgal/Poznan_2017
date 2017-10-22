@@ -457,7 +457,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="problem-badawczy" class="slide level2">
 <h2>Problem badawczy</h2>
 <p><span style="color:#2962FF">Problem</span>: <em>dysproporcjonalność wyborcza</em> <span class="math inline">\(\sim\)</span> <em>metody alokacji mandatów</em> <span class="math inline">\(+\)</span> <em>wielkość okręgów wyborczych</em></p>
-<p><span style="color:#2962FF">Cel</span>: Wykorzystując symulację komputerową <em>Monte Carlo</em>, zbadamy wpływu formuły wyborczej oraz wielkości okręgu wyborczego na poziom dysproporcjonalności wyborczej.</p>
+<p><span style="color:#2962FF">Cel</span>: Wykorzystując symulację komputerową <em>Monte Carlo</em>, zbadano wpływ:</p>
+<ul>
+<li>formuły wyborczej oraz</li>
+<li>wielkości okręgu wyborczego</li>
+</ul>
+<p>na poziom dysproporcjonalności wyborczej.</p>
 </section>
 <section id="uwagi-dotyczace-stanu-badan" class="slide level2">
 <h2>Uwagi dotyczące stanu badań</h2>
@@ -478,13 +483,22 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="metoda---symulacja-komputerowa-1" class="slide level2">
 <h2>Metoda - symulacja komputerowa (1)</h2>
-<p>Badanie, o którego wyniki przedstawię zostało wykonane z użyciem symulacji komputerowej <em>Monte Carlo</em>.</p>
 <p>Symulacja komputerowa pozwala odseparować <em>czysto</em> <span style="color:#2962FF">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#2962FF">psychologicznych</span>.</p>
+<p>Założenie <em>ceteris paribus</em></p>
 </section>
 <section id="metoda---symulacja-komputerowa-2" class="slide level2">
 <h2>Metoda - symulacja komputerowa (2)</h2>
 <p>Efekt <em>psychologiczny</em> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na <span class="math inline">\(l\)</span> ustalonych partii politycznych w n elekcjach.</p>
-<p>Symulacja komputerowa pozwala na precyzyjne prognozowania odchyleń od proporcjonalności, liczby partii parlamentarnych, nadwyżki zwycięzcy itp., dla wielu konfiguracji parametrów systemu wyborczego.</p>
+</section>
+<section id="metoda---symulacja-komputerowa-3" class="slide level2">
+<h2>Metoda - symulacja komputerowa (3)</h2>
+<p>Symulacja komputerowa pozwala na precyzyjne prognozowania:</p>
+<ul>
+<li>odchyleń od proporcjonalności,</li>
+<li>liczby partii parlamentarnych,</li>
+<li>nadwyżki zwycięzcy itp.,</li>
+</ul>
+<p>dla <span style="color:#2962FF"wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.</p>
 </section>
 <section id="podstawowe-cechy-symulacji" class="slide level2">
 <h2>Podstawowe cechy symulacji</h2>
@@ -501,8 +515,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="modele" class="slide level2">
 <h2>Modele</h2>
 <ul>
-<li>Model wykładniczy <span class="math display">\[GHI(DM_i) = Ce^{\alpha \times DM_i} + \epsilon_i\]</span></li>
-<li>Model log-liniowy</li>
+<li>Model <strong>wykładniczy</strong>:</li>
+</ul>
+<p><span class="math display">\[GHI(DM_i) = Ce^{\alpha \times DM_i} + \epsilon_i\]</span></p>
+<ul>
+<li>Model <strong>log-liniowy</strong>:</li>
 </ul>
 <p><span class="math display">\[ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3 \times NP_i + \\ + \beta_4 \times DM_i \times method_i + \beta_5 \times DM_i \times NP_i + \epsilon_i \]</span></p>
 </section>
@@ -510,7 +527,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>Pytania (1)</h2>
 <p>Jakie są krańcowe efekty (<em>marginal effects</em>):</p>
 <ul>
-<li>metod alokacji mandatów {…} i</li>
+<li>metod alokacji mandatów {np. D’Hondt} i</li>
 <li>wielkości okręgów wyborczych,</li>
 </ul>
 <p>względem wyborczej dysproporcjonalności?</p>
@@ -529,7 +546,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <table>
 <thead>
 <tr class="header">
-<th>The number of parties</th>
+<th>Liczba partii</th>
 <th>DH</th>
 <th>SL</th>
 <th>HA Imperiali</th>
@@ -634,7 +651,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>Dla <span class="math inline">\(\Delta DM = 3\)</span> lub <span class="math inline">\(-3\)</span></p>
 <p><img src="img/DM_delta_n3.svg" alt="Drawing" style="width:100%;"></p>
 </section></section>
-<section><section id="podsumowanie" class="titleslide slide level1"><h1>Podsumowanie</h1></section></section>
+<section><section id="dziekuje" class="titleslide slide level1"><h1>Dziękuję</h1></section></section>
     </div>
   </div>
 

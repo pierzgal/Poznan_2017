@@ -21,7 +21,12 @@ Version: 0.0.2
 
 <span style="color:#2962FF">Problem</span>: *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych*
 
-<span style="color:#2962FF">Cel</span>: Wykorzystując symulację komputerową *Monte Carlo*, zbadamy wpływu formuły wyborczej oraz wielkości okręgu wyborczego na poziom dysproporcjonalności wyborczej. 
+<span style="color:#2962FF">Cel</span>: Wykorzystując symulację komputerową *Monte Carlo*, zbadano wpływ:
+
+- formuły wyborczej oraz
+- wielkości okręgu wyborczego
+
+na poziom dysproporcjonalności wyborczej. 
 
 
 ## Uwagi dotyczące stanu badań
@@ -45,16 +50,24 @@ $GHI = \sqrt{1/2 \times \Sigma_k^l (\frac{s_k}{TS} - \frac{v_k}{TV})^2}, \text{ 
 
 ## Metoda - symulacja komputerowa (1)
 
-Badanie, o którego wyniki przedstawię zostało wykonane z użyciem symulacji komputerowej *Monte Carlo*.
-
 Symulacja komputerowa pozwala odseparować *czysto* <span style="color:#2962FF">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#2962FF">psychologicznych</span>.
+
+Założenie *ceteris paribus*
 
 
 ## Metoda - symulacja komputerowa (2)
 
 Efekt *psychologiczny* jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na $l$ ustalonych partii politycznych w n elekcjach.
 
-Symulacja komputerowa pozwala na precyzyjne prognozowania odchyleń od proporcjonalności, liczby partii parlamentarnych, nadwyżki zwycięzcy itp., dla wielu konfiguracji parametrów systemu wyborczego.
+## Metoda - symulacja komputerowa (3)
+
+Symulacja komputerowa pozwala na precyzyjne prognozowania:
+
+- odchyleń od proporcjonalności,
+- liczby partii parlamentarnych,
+- nadwyżki zwycięzcy itp.,
+
+dla <span style="color:#2962FF"wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
 
 ## Podstawowe cechy symulacji
 
@@ -70,9 +83,11 @@ Symulator wykonuje operacje podziału dostępnych w okręgach mandatów między 
 
 ## Modele
 
-- Model wykładniczy
+- Model **wykładniczy**:
+
 $$GHI(DM_i) = Ce^{\alpha \times DM_i} + \epsilon_i$$
-- Model log-liniowy
+
+- Model **log-liniowy**:
 
 $$ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3 \times NP_i + \\ + \beta_4 \times DM_i \times method_i + \beta_5 \times DM_i \times NP_i + \epsilon_i $$
 
@@ -80,7 +95,7 @@ $$ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3
 
 Jakie są krańcowe efekty (*marginal effects*):
 
-- metod alokacji mandatów {...} i
+- metod alokacji mandatów {np. D'Hondt} i
 - wielkości okręgów wyborczych,
 
 względem wyborczej dysproporcjonalności?
@@ -99,7 +114,7 @@ Który z parametrów (formuła wyborcza, wielkość okręgu) wpływa silniej na 
 
 ## Konfiguracje parametrów systemu generujące dysproporcjonalność w przedziale [0.05, 0.1]
 
-The number of parties | DH | SL | HA Imperiali
+Liczba partii | DH | SL | HA Imperiali
 -|-|-|-
 3                     | [[5.64], [9.45]]   | [[4.51], [7.80]]  | [[9.93], [16.06]]
 6                     | [[8.69], [13.31]]  | [[6.61], [10.20]] | [[14.79], [22.40]]
@@ -146,4 +161,4 @@ Dla $\Delta DM = 3$ lub $-3$
 
 <img src="img/DM_delta_n3.svg" alt="Drawing" style="width:100%;">
 
-# Podsumowanie
+# Dziękuję
