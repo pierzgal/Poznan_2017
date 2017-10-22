@@ -67,7 +67,7 @@ Symulacja komputerowa pozwala na precyzyjne prognozowania:
 - liczby partii parlamentarnych,
 - nadwyżki zwycięzcy itp.,
 
-dla <span style="color:#2962FF"wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
+dla <span style="color:#2962FF">wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
 
 ## Podstawowe cechy symulacji
 
