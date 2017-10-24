@@ -466,9 +466,24 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="uwagi-dotyczace-stanu-badan" class="slide level2">
 <h2>Uwagi dotyczące stanu badań</h2>
-<p>Matematycy uporządkowali metody alokacji mandatów względem generowanego poziomu dysproporcjonalności.</p>
+<p>Zależność <em>dysproporcjonalność wyborcza</em> <span class="math inline">\(\sim\)</span> <em>metody alokacji mandatów</em> <span class="math inline">\(+\)</span> <em>wielkość okręgów wyborczych</em> była wcześniej badana m.in przez K. Benoita (2000), Gallaghera (1990, 1992) lub Pukelsheima (2014).</p>
+<p><strong>Prezentowane badanie jest <span style="color:#2962FF"><em>replikacją</em> analizy Benoita</span> (2000), z użyciem danych pochodzących z symulacji komputerowej</strong>.</p>
+</section>
+<section id="uwagi-dotyczace-stanu-badan-2" class="slide level2">
+<h2>Uwagi dotyczące stanu badań (2)</h2>
+<p><span style="color:#2962FF">Matematycy</span> uporządkowali metody alokacji mandatów względem generowanego poziomu dysproporcjonalności.</p>
+<p><span class="math inline">\(Ranking = (Imperiali HA, Jefferson-D&#39;Hondt, ...)\)</span></p>
 <p>Matematycy badali też tzw. <span style="color:#2962FF">obciążenie</span> metod podziału (<em>seat biases</em>).</p>
-<p>Jeżeli chodzi o badania politologów lub socjologów, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.</p>
+<p>Jeżeli chodzi o <span style="color:#2962FF">badania <strong>politologów</strong> i <strong>socjologów</strong></span>, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.</p>
+</section>
+<section id="schemat-analizy" class="slide level2">
+<h2>Schemat analizy</h2>
+<ol type="1">
+<li>Losowanie próby obserwacji z użyciem symulacji <em>Monte Carlo</em>, dla ustalonych parametrów symulacji, t.j. np.: wielkość okręgów wyborczych, typy formuł wyborczych, formalny próg reprezentacji, liczba partii politycznych oraz rozkład prawdopodobieństwa, z którego będzie losowana próba zawierająca sumy głosów ważnych oddane na partie, na poziomie okręgu;</li>
+<li>Alokacja mandatów na poziomie okręgów;</li>
+<li>Opis wyników z użyciem <strong>modeli regresyjnych</strong> oraz <strong>metod graficznych</strong> (np. wykresy pudełkowe);</li>
+<li>Interpretacja modeli i wykresów oraz sformułowanie wniosków.</li>
+</ol>
 </section>
 <section id="metoda---operacjonalizacja-dysproporcjonalnosci" class="slide level2">
 <h2>Metoda - operacjonalizacja dysproporcjonalności</h2>
@@ -478,8 +493,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 <p><span class="math inline">\(GHI = \sqrt{1/2 \times \Sigma_k^l (\frac{s_k}{TS} - \frac{v_k}{TV})^2}, \text{ for } k = 1, ..., l\)</span></p>
 <ul>
-<li>Wskaźniki <span style="color:#2962FF">indywidualne</span> (<em>seat excess</em>, <em>seat bias</em>)</li>
+<li>Wskaźniki <span style="color:#2962FF">‘indywidualne’</span> (<em>seat excess</em>, <em>seat bias</em>)</li>
 </ul>
+<p><span class="math inline">\(SB^2_k(TS) = E[\frac{s_i}{TS} - \frac{v_i}{TV} \mid \frac{v_1}{TV} \geq \frac{v_2}{TV} \geq ... \geq \frac{v_l}{TV} \geq 0]\)</span></p>
 </section>
 <section id="metoda---symulacja-komputerowa-1" class="slide level2">
 <h2>Metoda - symulacja komputerowa (1)</h2>
@@ -488,7 +504,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="metoda---symulacja-komputerowa-2" class="slide level2">
 <h2>Metoda - symulacja komputerowa (2)</h2>
-<p>Efekt <em>psychologiczny</em> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na <span class="math inline">\(l\)</span> ustalonych partii politycznych w n elekcjach.</p>
+<p>Efekt <em>psychologiczny</em> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na <span class="math inline">\(l\)</span> ustalonych partii politycznych w <span class="math inline">\(n\)</span> elekcjach.</p>
 </section>
 <section id="metoda---symulacja-komputerowa-3" class="slide level2">
 <h2>Metoda - symulacja komputerowa (3)</h2>
@@ -508,8 +524,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>I Etap (stochastyczny)</h2>
 <p>Symulator generuje <em>n</em> wektorów głosów ważnych, oddanych w okręgach, na <em>l</em> partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można <span class="math inline">\(TS\)</span> mandatów. Głosy oddane na partie losowane są z uciętego rozkładu <em>log-normalnego</em>: <span class="math display">\[v_i \sim lnN(\mu, \sigma, min = a, max = b)\]</span></p>
 </section>
-<section id="ii-etap" class="slide level2">
-<h2>II Etap</h2>
+<section id="ii-etap-deterministyczny" class="slide level2">
+<h2>II Etap (deterministyczny)</h2>
 <p>Symulator wykonuje operacje podziału dostępnych w okręgach mandatów między <em>l</em> partii politycznych, z użyciem ustalonych metod alokacji.</p>
 </section>
 <section id="modele" class="slide level2">
@@ -541,7 +557,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 <p>Który z parametrów (formuła wyborcza, wielkość okręgu) wpływa silniej na poziom odchylenia od proporcjonalności mierzony wskaźnikiem GHI?</p>
 </section>
-<section><section id="wyniki" class="titleslide slide level1"><h1>Wyniki</h1></section><section id="konfiguracje-parametrow-systemu-generujace-dysproporcjonalnosc-w-przedziale-0.05-0.1" class="slide level2">
+<section><section id="wyniki" class="titleslide slide level1"><h1>Wyniki</h1></section><section id="wyniki-1" class="slide level2">
+<h2>Wyniki</h2>
+<p>Uzyskane wartości liczbowe zostały wyznaczone na podstawie <em>modeli regresyjnych</em>, których parametry oszacowano z użyciem danych z symulacji <em>Monte Carlo</em>.</p>
+</section><section id="konfiguracje-parametrow-systemu-generujace-dysproporcjonalnosc-w-przedziale-0.05-0.1" class="slide level2">
 <h2>Konfiguracje parametrów systemu generujące dysproporcjonalność w przedziale [0.05, 0.1]</h2>
 <table>
 <thead>
@@ -650,6 +669,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>Efekty krańcowe (4b)</h2>
 <p>Dla <span class="math inline">\(\Delta DM = 3\)</span> lub <span class="math inline">\(-3\)</span></p>
 <p><img src="img/DM_delta_n3.svg" alt="Drawing" style="width:100%;"></p>
+</section><section id="podstawowe-wnioski-1" class="slide level2">
+<h2>Podstawowe wnioski (1)</h2>
+<p>Na przykład, dla metody <em>d’Hondta</em> i 6-partyjnego systemu, jeśli <em>DM</em> zmniejszy się o 3 mandaty (<span class="math inline">\(\Delta DM = −3\)</span>), oczekiwana agregatowa dysproporcjonalność (GHI) - <em>ceteris paribus</em> - wzrośnie o ok. <span class="math inline">\(38\%\)</span>.</p>
+</section><section id="podstawowe-wnioski-2" class="slide level2">
+<h2>Podstawowe wnioski (2)</h2>
+<p>Zamiana metody <strong>Hamiltona</strong> na formułę <strong>d’Hondta</strong> powoduje, przeciętnie, w przybliżeniu <span class="math inline">\(36\%\)</span> wzrost dysproporcjonalności (GHI), w przedziale <span class="math inline">\(2-20\)</span> mandatów na okręg.</p>
+</section><section id="podstawowe-wnioski-3" class="slide level2">
+<h2>Podstawowe wnioski (3)</h2>
+<p>Ogólnie, badanie wskazuje, że zmiana formuły wyborczej (np. z <strong>Hamiltona</strong> na <strong>d’Hondta</strong>) ma mniejszy wpływ na poziom dysproporcjonalności wyborczej, w porównaniu do wpływu zmiany wielkości okręgu wyborczego (co najmniej o <strong>3</strong> mandaty).</p>
 </section></section>
 <section><section id="dziekuje" class="titleslide slide level1"><h1>Dziękuję</h1></section></section>
     </div>
