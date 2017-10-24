@@ -1,5 +1,5 @@
 ---
-title: "Uwarunkowania dysproporcjonalności wyborczej w systemach reprezentacji proporcjonalnej: ..."
+title: "Uwarunkowania dysproporcjonalności wyborczej ..."
 author: "Michał Pierzgalski"
 output:
   
@@ -10,71 +10,64 @@ output:
         toggleNotesButton: no
     reveal_plugins: chalkboard
     self_contained: no
-    theme: white
+    theme: black
     transition: "slide"
   pdf_document: default
   html_document: default
 Version: 0.0.2
 ---
 
+# Problem badawczy
+
 ## Problem badawczy
 
-<span style="color:#2962FF">Problem</span>: *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych*
+<span style="color:#FFAB00">Problem</span>: *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych*
 
-<span style="color:#2962FF">Cel</span>: Wykorzystując symulację komputerową *Monte Carlo*, zbadano wpływ:
+<span style="color:#FFAB00">Cel</span>: Wykorzystując symulację komputerową *Monte Carlo*, zbadano wpływ:
 
 - formuły wyborczej oraz
-- wielkości okręgu wyborczego
+- wielkości okręgu wyborczego,
 
 na poziom dysproporcjonalności wyborczej.
 
+
+# Uwagi dotyczące stanu badań
+
 ## Uwagi dotyczące stanu badań
 
-Zależność *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych* była wcześniej badana m.in przez K. Benoita (2000), Gallaghera (1990, 1992) lub Pukelsheima (2014).
+Zależność *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych* była wcześniej badana **m.in** przez K. Benoita (2000), M. Gallaghera (1990, 1992), F. Pukelsheima (2014).
 
-**Prezentowane badanie jest <span style="color:#2962FF">*replikacją* analizy Benoita</span> (2000), z użyciem danych pochodzących z symulacji komputerowej**.
-
+Jeżeli chodzi o <span style="color:#FFAB00">badania **politologów** i **socjologów**</span>, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.
 
 ## Uwagi dotyczące stanu badań (2)
 
-<span style="color:#2962FF">Matematycy</span> uporządkowali metody alokacji mandatów względem generowanego poziomu dysproporcjonalności.
+Prezentowane badanie jest <span style="color:#FFAB00">*replikacją* analizy Benoita</span> (2000. *Which Electoral Formula is the Most Proportional? A New Look with New Evidence*), z użyciem danych pochodzących z **symulacji komputerowej**.
 
-$Ranking = (Imperiali HA, Jefferson-D'Hondt, ...)$
 
-Matematycy badali też tzw. <span style="color:#2962FF">obciążenie</span> metod podziału (*seat biases*).
-
-Jeżeli chodzi o <span style="color:#2962FF">badania **politologów** i **socjologów**</span>, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.
-
-## Schemat analizy
-
-1. Losowanie próby obserwacji z użyciem symulacji *Monte Carlo*, dla ustalonych parametrów symulacji, t.j. np.: wielkość okręgów wyborczych, typy formuł wyborczych, formalny próg reprezentacji, liczba partii politycznych oraz rozkład prawdopodobieństwa, z którego będzie losowana próba zawierająca sumy głosów ważnych oddane na partie, na poziomie okręgu;
-2. Alokacja mandatów na poziomie okręgów;
-3. Opis wyników z użyciem **modeli regresyjnych** oraz **metod graficznych** (np. wykresy pudełkowe);
-4. Interpretacja modeli i wykresów oraz sformułowanie wniosków.
-
+# Metoda
 
 ## Metoda - operacjonalizacja dysproporcjonalności
 
 Typy mierników:
 
-- Wskaźniki <span style="color:#2962FF">agregatowe</span> (np . *GHI*)
+- Wskaźniki <span style="color:#FFAB00">agregatowe</span> (np . *GHI*)
 
 $GHI = \sqrt{1/2 \times \Sigma_k^l (\frac{s_k}{TS} - \frac{v_k}{TV})^2}, \text{ for } k = 1, ..., l$
 
-- Wskaźniki <span style="color:#2962FF">'indywidualne'</span> (*seat excess*, *seat bias*)
+- Wskaźniki <span style="color:#FFAB00">'indywidualne'</span> (*seat excess*, *seat bias*)
 
 $SB^2_k(TS) = E[\frac{s_i}{TS} - \frac{v_i}{TV} \mid \frac{v_1}{TV} \geq \frac{v_2}{TV} \geq ... \geq \frac{v_l}{TV} \geq 0]$
 
+
 ## Metoda - symulacja komputerowa (1)
 
-Symulacja komputerowa pozwala odseparować *czysto* <span style="color:#2962FF">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#2962FF">psychologicznych</span>.
+Symulacja komputerowa pozwala odseparować *czysto* <span style="color:#FFAB00">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#FFAB00">psychologicznych</span>.
 
 Założenie *ceteris paribus*
 
-
 ## Metoda - symulacja komputerowa (2)
 
-Efekt *psychologiczny* jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na $l$ ustalonych partii politycznych w $n$ elekcjach.
+<span style="color:#FFAB00">Efekt *psychologiczny*</span> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na $l$ ustalonych partii politycznych w $n$ elekcjach.
 
 ## Metoda - symulacja komputerowa (3)
 
@@ -84,19 +77,19 @@ Symulacja komputerowa pozwala na precyzyjne prognozowania:
 - liczby partii parlamentarnych,
 - nadwyżki zwycięzcy itp.,
 
-dla <span style="color:#2962FF">wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
+dla <span style="color:#FFAB00">wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
 
 ## Podstawowe cechy symulacji
 
-Proces symulacji przebiega na <span style="color:#2962FF">dwóch podstawowych etapach</span>:
+Proces symulacji przebiega na <span style="color:#FFAB00">dwóch podstawowych etapach</span>:
 
 ## I Etap (stochastyczny)
-Symulator generuje *n* wektorów głosów ważnych, oddanych w okręgach, na *l* partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można $TS$ mandatów. Głosy oddane na partie losowane są z uciętego rozkładu *log-normalnego*: $$v_i \sim lnN(\mu, \sigma, min = a, max = b)$$
+
+Symulator generuje *n* wektorów głosów ważnych, oddanych w okręgach, na *l* partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można $TS$ mandatów. Głosy oddane na partie losowane są np. z uciętego rozkładu *log-normalnego*: $$v_i \sim lnN(\mu, \sigma, min = a, max = b)$$
 
 ## II Etap (deterministyczny)
 
 Symulator wykonuje operacje podziału dostępnych w okręgach mandatów między *l* partii politycznych, z użyciem ustalonych metod alokacji.
-
 
 ## Modele
 
@@ -108,23 +101,26 @@ $$GHI(DM_i) = Ce^{\alpha \times DM_i} + \epsilon_i$$
 
 $$ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3 \times NP_i + \\ + \beta_4 \times DM_i \times method_i + \beta_5 \times DM_i \times NP_i + \epsilon_i $$
 
+
+# Pytania
+
 ## Pytania (1)
 
-Jakie są krańcowe efekty (*marginal effects*):
+1. Jakie są krańcowe efekty (*marginal effects*):
 
-- metod alokacji mandatów {np. D'Hondt} i
+- metod alokacji mandatów {np. *D'Hondt*} i
 - wielkości okręgów wyborczych,
 
 względem wyborczej dysproporcjonalności?
 
 ## Pytania (2)
 
-Jak zmienia się poziom wyborczej dysproporcjonalności mierzony GHI, gdy:
+2. Jak zmienia się poziom wyborczej dysproporcjonalności mierzony GHI, gdy:
 
-- zmieniamy metodę alokacji z Hamiltona na metodę (np.) D'Hondta,
+- zmieniamy metodę alokacji z *Hamiltona* na metodę (np.) *D'Hondta*,
 - zwiększamy/zmniejszamy wielkość okręgu o jednostkę ($\Delta DM = 1$)?
 
-Który z parametrów (formuła wyborcza, wielkość okręgu) wpływa silniej na poziom odchylenia od proporcjonalności mierzony wskaźnikiem GHI?
+3. Który z parametrów (formuła wyborcza, wielkość okręgu) wpływa silniej na poziom odchylenia od proporcjonalności mierzony wskaźnikiem GHI?
 
 
 # Wyniki
@@ -162,38 +158,38 @@ Liczba partii | DH | SL | HA Imperiali
 
 ## Efekty krańcowe (3a)
 
-<img src="img/sim_aggregate9_1.svg" alt="Drawing" style="width:80%;">
+<img src="img/sim_aggregate9_1.svg" alt="Drawing" style="width:90%;">
 
 
 ## Efekty krańcowe (3b)
 
-<img src="img/sim_aggregate12_1.svg" alt="Drawing" style="width:80%;">
+<img src="img/sim_aggregate12_1.svg" alt="Drawing" style="width:90%;">
 
 
 ## Efekty krańcowe (4a)
 
 Dla $\Delta DM = 3$ lub $-3$
 
-<img src="img/DM_delta_3.svg" alt="Drawing" style="width:100%;">
+<img src="img/DM_delta_3.svg" alt="Drawing" style="width:120%;">
 
 ## Efekty krańcowe (4b)
 
 Dla $\Delta DM = 3$ lub $-3$
 
-<img src="img/DM_delta_n3.svg" alt="Drawing" style="width:100%;">
+<img src="img/DM_delta_n3.svg" alt="Drawing" style="width:120%;">
 
 
 ## Podstawowe wnioski (1)
 
-Na przykład, dla metody *d’Hondta* i 6-partyjnego systemu, jeśli *DM* zmniejszy się o 3 mandaty ($\Delta DM = −3$), oczekiwana agregatowa dysproporcjonalność (GHI) - *ceteris paribus* - wzrośnie o ok. $38\%$.
+1. Na przykład, dla metody *d’Hondta* i 6-partyjnego systemu, jeśli wielkość okręgu zmniejszy się o trzy mandaty, oczekiwana agregatowa dysproporcjonalność (GHI) - *ceteris paribus* - wzrośnie o ok. <span style="color:#FFAB00">$38\%$</span>.
 
 ## Podstawowe wnioski (2)
 
-Zamiana metody **Hamiltona** na formułę **d’Hondta** powoduje, przeciętnie, w przybliżeniu $36\%$ wzrost dysproporcjonalności (GHI), w przedziale $2-20$ mandatów na okręg.
+2. Zamiana metody **Hamiltona** na formułę **d’Hondta** powoduje, przeciętnie, w przybliżeniu <span style="color:#FFAB00">$36\%$</span> wzrost dysproporcjonalności (GHI), w przedziale $2-20$ mandatów na okręg.
 
 ## Podstawowe wnioski (3)
 
-Ogólnie, badanie wskazuje, że zmiana formuły wyborczej (np. z **Hamiltona** na **d’Hondta**) ma mniejszy wpływ na poziom dysproporcjonalności wyborczej, w porównaniu do wpływu zmiany wielkości okręgu wyborczego (co najmniej o **3** mandaty).
+3. Ogólnie, badanie wskazuje, że zmiana formuły wyborczej (np. z **Hamiltona** na **d’Hondta**) ma mniejszy wpływ na poziom dysproporcjonalności wyborczej, w porównaniu do wpływu zmiany wielkości okręgu wyborczego (co najmniej o **3** mandaty).
 
 
 # Dziękuję
