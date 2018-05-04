@@ -1,8 +1,10 @@
 ---
-title: "Uwarunkowania dysproporcjonalności wyborczej ..."
+title: "Zastosowanie symulacji komputerowych do badania efektów procedur wyborczych"
 author: "Michał Pierzgalski"
 output:
   
+  html_document: default
+  pdf_document: default
   revealjs::revealjs_presentation:
     reveal_options:
     chalkboard:
@@ -10,88 +12,148 @@ output:
         toggleNotesButton: no
     reveal_plugins: chalkboard
     self_contained: no
-    theme: black
+    theme: white
     transition: "slide"
-  pdf_document: default
-  html_document: default
 Version: 0.0.2
 ---
-
-# Problem badawczy
-
-## Problem badawczy
-
-<span style="color:#FFAB00">Problem</span>: *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych*
-
-<span style="color:#FFAB00">Cel</span>: Wykorzystując symulację komputerową *Monte Carlo*, zbadano wpływ:
-
-- formuły wyborczej oraz
-- wielkości okręgu wyborczego,
-
-na poziom dysproporcjonalności wyborczej.
-
 
 # Uwagi dotyczące stanu badań
 
 ## Uwagi dotyczące stanu badań
 
-Zależność *dysproporcjonalność wyborcza* $\sim$ *metody alokacji mandatów* $+$ *wielkość okręgów wyborczych* była wcześniej badana **m.in** przez K. Benoita (2000), M. Gallaghera (1990, 1992), F. Pukelsheima (2014).
+Efekty <span style="color:#304FFE">*mechaniczne* i *psychologiczne*</span> procedur wyborczych były wcześniej przedmiotem szczegółowych badań politologów, socjologów oraz matematyków.
 
-Jeżeli chodzi o <span style="color:#FFAB00">badania **politologów** i **socjologów**</span>, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.
+Jeżeli chodzi o <span style="color:#304FFE">badania **politologów** i **socjologów**</span>, to oparte były one na danych pochodzących z prawdziwych elekcji.
 
-## Uwagi dotyczące stanu badań (2)
+Analizę efektów *mechanicznych* i *psychologicznych*, w tym replikację wcześniejszych badań, można przeprowadzić wykorzystując dane z <span style="color:#0097A7">**symulacji komputerowych**</span>.
 
-Prezentowane badanie jest <span style="color:#FFAB00">*replikacją* analizy Benoita</span> (2000. *Which Electoral Formula is the Most Proportional? A New Look with New Evidence*), z użyciem danych pochodzących z **symulacji komputerowej**.
+## Efekty mechaniczne
 
-
-# Metoda
-
-## Metoda - operacjonalizacja dysproporcjonalności
-
-Typy mierników:
-
-- Wskaźniki <span style="color:#FFAB00">agregatowe</span> (np . *GHI*)
-
-$GHI = \sqrt{1/2 \times \Sigma_k^l (\frac{s_k}{TS} - \frac{v_k}{TV})^2}, \text{ for } k = 1, ..., l$
-
-- Wskaźniki <span style="color:#FFAB00">'indywidualne'</span> (*seat excess*, *seat bias*)
-
-$SB^2_k(TS) = E[\frac{s_i}{TS} - \frac{v_i}{TV} \mid \frac{v_1}{TV} \geq \frac{v_2}{TV} \geq ... \geq \frac{v_l}{TV} \geq 0]$
+<img src="img/rys1.svg" alt="Drawing" style="width:70%; background-color:#D1C4E9; padding:20px; border:none; box-shadow:none;">
 
 
-## Metoda - symulacja komputerowa (1)
+## Równoważenie *wyborczej dysproporcjonalności* i *fragmentacji parlamentu*
+
+Liczne badania *mechanicznych* i *psychologicznych* efektów procedur wyborczych dotyczyły <span style="color:#304FFE">wpływu systemu wyborczego</span> na:
+
+- dysproporcjonalność wyborczą,
+- poziom fragmentacji parlamentarnego systemu partyjnego.
+
+## Symulacja komputerowa w badaniach wyborczych
+
+Metoda symulacyjna umożliwia <span style="color:#304FFE">*replikację*</span> ważnych, ale czasami dyskusyjnych, badań:
+
+- Benoit, K. (2000). *Which Electoral Formula Is the Most Proportional? A New Look with New Evidence*. Political Analysis;
+- Carey, J. M., & Hix, S. (2011). *The Electoral Sweet Spot: Low-Magnitude Proportional Electoral Systems*. American Journal of Political Science.
+
+
+## Symulacja komputerowa w badaniach wyborczych (2)
+
+Wykorzystując symulację komputerową *Monte Carlo*, można m.in. badać <span style="color:#304FFE">**'czysto'** *mechaniczny*</span> wpływ:
+
+- formuły wyborczej,
+- wielkości okręgu wyborczego,
+
+na poziom **dysproporcjonalności** wyborczej.
+
+## Symulacja komputerowa w badaniach wyborczych (3)
+
+**Metoda symulacyjna** umożliwia **wyizolowanie** wpływu na *dysproporcjonalność* wyborczą lub *fragmentację* parlamentu pojedynczego czynnika (np. wielkość okręgów wyborczych) - założenie *ceteris paribus*.
+
+Stosując symulację komputerową można dość łatwo *kontrolować* istotne <span style="color:#304FFE">zmienne moderujące</span>, takie jak:
+
+- liczba partii rywalizujących w okręgu,
+- rozkład głosów w okręgu.
+
+## Dysproporcjonalność ~ *DM*
+
+<img src="img/relationships2.svg" alt="Drawing" style="width:100%; background-color:#D1C4E9; padding:20px; border:none; box-shadow:none;">
+
+
+## Przykład 
+
+W badaniu Carey i Hixa (2011), autorzy przewartościowują znaczenie ..., ponieważ ...
+
+
+## Symulacja komputerowa w badaniach wyborczych (4)
 
 Symulacja komputerowa pozwala odseparować *czysto* <span style="color:#FFAB00">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#FFAB00">psychologicznych</span>.
 
-Założenie *ceteris paribus*
 
-## Metoda - symulacja komputerowa (2)
+## Symulacja komputerowa w badaniach wyborczych (5)
 
-<span style="color:#FFAB00">Efekt *psychologiczny*</span> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na $l$ ustalonych partii politycznych w $n$ elekcjach.
+<span style="color:#FFAB00">Efekt *psychologiczny*</span> odzwierciedlają:
 
-## Metoda - symulacja komputerowa (3)
+- ustalona liczba $l$ rywalizujących w okręgu partii politycznych,
+- kształt krzywej *funkcji gęstości rozkładu prawdopodobieństwa*, która wykorzystywana jest do losowania próby zawierającej głosy oddane na $l$ partii politycznych w $n$ elekcjach.
 
-Symulacja komputerowa pozwala na precyzyjne prognozowania:
+
+## Podstawowe zalety metody symulacyjnej
+
+- pozwala na przeprowadzenie złożonej analizy *mechanicznych* efektów systemów reprezentacji proporcjonalnej (uwzględnienie różnorodnych kombinacji formuły wyborczej, wielkości okręgów, klauzuli zaporowej oraz liczby konkurujących w okręgu partii);
+- umożliwia odseparowanie efektów *mechanicznych* od efektów *psychologicznych* systemu;
+- pozwala badając efekt jednej zmiennej utrzymać pozostałe zmienne na stałym poziomie (*ceteris paribus*);
+- daje możliwość łatwej replikacji lub reprodukcji badania.
+
+## Podstawowe zalety metody symulacyjnej (2)
+
+Symulacja komputerowa pozwala na precyzyjne prognozowanie:
 
 - odchyleń od proporcjonalności,
 - liczby partii parlamentarnych,
 - nadwyżki zwycięzcy itp.,
 
-dla <span style="color:#FFAB00">wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
+dla <span style="color:#FFAB00">różnorodnych konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.
+
+
+## Pytania szczegółowe (1)
+
+- Czy istnieje optymalna kombinacja wielkości okręgu wyborczego oraz formuły wyborczej, która zapewnia równowagę między dysproporcjonalnością wyborczą i poziomem fragmentacji parlamentarnego systemu partyjnego (*electoral sweet-spot*)? Czy małe okręgi (4-8) są najlepsze? (Carey & Hix, 2011)
+
+## Pytania szczegółowe (2)
+
+- Jak na proporcję głosów najmniejszej partii uzyskującej mandaty wpływają różne konfiguracje formuły wyborczej, wielkości okręgów i klauzuli zaporowej?
+
+- Jak wpływają różne konfiguracje parametrów systemów reprezentacji proporcjonalnej na wysokość tzw. *nadwyżki partii zwycięskiej* (*seat excess* dla partii zwycięskiej)?
+
+
+# Symulator
+
+## Projekt aplikacji
+
+Aplikacja komputerowa zaprojektowana z użyciem języka programowania **R**:
+- pakiet *disprr* - wersja *alpha*;
+- wersja online (aplikacja w technologii *Shiny*):
+https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/
+
 
 ## Podstawowe cechy symulacji
 
 Proces symulacji przebiega na <span style="color:#FFAB00">dwóch podstawowych etapach</span>:
 
-## I Etap (stochastyczny)
+## I etap - stochastyczny
 
 Symulator generuje *n* wektorów głosów ważnych, oddanych w okręgach, na *l* partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można $TS$ mandatów. Głosy oddane na partie losowane są np. z uciętego rozkładu *log-normalnego*: $$v_i \sim lnN(\mu, \sigma, min = a, max = b)$$
 
-## II Etap (deterministyczny)
+## II etap - deterministyczny
 
 Symulator wykonuje operacje podziału dostępnych w okręgach mandatów między *l* partii politycznych, z użyciem ustalonych metod alokacji.
 
-## Modele
+
+## Przykładowe ustawienia symulacji
+
+Zbiór danych z symulatora zawiera:
+
+- wektory głosów dla $l = \{3, 6, 9, 12\}$ partii, wylosowane z rozkładu log-normalnego (dla zmiennych parametrów),
+- [dla] $n = 500$ elekcji (zakłada się istnienie 1 okręgu narodowego),
+- [w] okręgach o wielkości od 2 do 20 mandatów.
+
+Dla wskazanych ustawień zbiór danych zawiera $4 \times 500 \times 19$ = **38 000** elekcji.
+
+
+# Analiza danych z symulacji
+
+## Modele: Dysproporcjonalność ~ Wielkość okręgu
 
 - Model **wykładniczy**:
 
@@ -100,6 +162,17 @@ $$GHI(DM_i) = Ce^{\alpha \times DM_i} + \epsilon_i$$
 - Model **log-liniowy**:
 
 $$ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3 \times NP_i + \\ + \beta_4 \times DM_i \times method_i + \beta_5 \times DM_i \times NP_i + \epsilon_i $$
+
+
+## Wizualizacja: Dysproporcjonalność ~ DM | 3
+
+<img src="img/ghi_np3.svg" alt="Drawing" style="width:76%;">
+
+
+## Wizualizacja: Dysproporcjonalność ~ DM | 9
+
+<img src="img/ghi_np9.svg" alt="Drawing" style="width:76%;">
+
 
 
 # Pytania

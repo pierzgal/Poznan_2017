@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Michał Pierzgalski" />
-  <title>Uwarunkowania dysproporcjonalności wyborczej …</title>
+  <title>Zastosowanie symulacji komputerowych do badania efektów procedur wyborczych</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -12,13 +12,8 @@
 
 
 
-<link rel="stylesheet" href="P2017_files/reveal.js-3.3.0.1/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="P2017_files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
 
-<style type="text/css">
-.reveal section img {
-  background: rgba(255, 255, 255, 0.85);
-}
-</style>
 
   <!-- some tweaks to reveal css -->
   <style type="text/css">
@@ -455,66 +450,117 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Uwarunkowania dysproporcjonalności wyborczej …</h1>
+    <h1 class="title">Zastosowanie symulacji komputerowych do badania efektów procedur wyborczych</h1>
     <h2 class="author">Michał Pierzgalski</h2>
 </section>
 
-<section><section id="problem-badawczy" class="titleslide slide level1"><h1>Problem badawczy</h1></section><section id="problem-badawczy-1" class="slide level2">
-<h2>Problem badawczy</h2>
-<p><span style="color:#FFAB00">Problem</span>: <em>dysproporcjonalność wyborcza</em> <span class="math inline">\(\sim\)</span> <em>metody alokacji mandatów</em> <span class="math inline">\(+\)</span> <em>wielkość okręgów wyborczych</em></p>
-<p><span style="color:#FFAB00">Cel</span>: Wykorzystując symulację komputerową <em>Monte Carlo</em>, zbadano wpływ:</p>
-<ul>
-<li>formuły wyborczej oraz</li>
-<li>wielkości okręgu wyborczego,</li>
-</ul>
-<p>na poziom dysproporcjonalności wyborczej.</p>
-</section></section>
 <section><section id="uwagi-dotyczace-stanu-badan" class="titleslide slide level1"><h1>Uwagi dotyczące stanu badań</h1></section><section id="uwagi-dotyczace-stanu-badan-1" class="slide level2">
 <h2>Uwagi dotyczące stanu badań</h2>
-<p>Zależność <em>dysproporcjonalność wyborcza</em> <span class="math inline">\(\sim\)</span> <em>metody alokacji mandatów</em> <span class="math inline">\(+\)</span> <em>wielkość okręgów wyborczych</em> była wcześniej badana <strong>m.in</strong> przez K. Benoita (2000), M. Gallaghera (1990, 1992), F. Pukelsheima (2014).</p>
-<p>Jeżeli chodzi o <span style="color:#FFAB00">badania <strong>politologów</strong> i <strong>socjologów</strong></span>, to oparte były one, dotychczas, na danych empirycznych z prawdziwych elekcji.</p>
-</section><section id="uwagi-dotyczace-stanu-badan-2" class="slide level2">
-<h2>Uwagi dotyczące stanu badań (2)</h2>
-<p>Prezentowane badanie jest <span style="color:#FFAB00"><em>replikacją</em> analizy Benoita</span> (2000. <em>Which Electoral Formula is the Most Proportional? A New Look with New Evidence</em>), z użyciem danych pochodzących z <strong>symulacji komputerowej</strong>.</p>
-</section></section>
-<section><section id="metoda" class="titleslide slide level1"><h1>Metoda</h1></section><section id="metoda---operacjonalizacja-dysproporcjonalnosci" class="slide level2">
-<h2>Metoda - operacjonalizacja dysproporcjonalności</h2>
-<p>Typy mierników:</p>
+<p>Efekty <span style="color:#304FFE"><em>mechaniczne</em> i <em>psychologiczne</em></span> procedur wyborczych były wcześniej przedmiotem szczegółowych badań politologów, socjologów oraz matematyków.</p>
+<p>Jeżeli chodzi o <span style="color:#304FFE">badania <strong>politologów</strong> i <strong>socjologów</strong></span>, to oparte były one na danych pochodzących z prawdziwych elekcji.</p>
+<p>Analizę efektów <em>mechanicznych</em> i <em>psychologicznych</em>, w tym replikację wcześniejszych badań, można przeprowadzić wykorzystując dane z <span style="color:#0097A7"><strong>symulacji komputerowych</strong></span>.</p>
+</section><section id="efekty-mechaniczne" class="slide level2">
+<h2>Efekty mechaniczne</h2>
+<p><img src="img/rys1.svg" alt="Drawing" style="width:70%; background-color:#D1C4E9; padding:20px; border:none; box-shadow:none;"></p>
+</section><section id="rownowazenie-wyborczej-dysproporcjonalnosci-i-fragmentacji-parlamentu" class="slide level2">
+<h2>Równoważenie <em>wyborczej dysproporcjonalności</em> i <em>fragmentacji parlamentu</em></h2>
+<p>Liczne badania <em>mechanicznych</em> i <em>psychologicznych</em> efektów procedur wyborczych dotyczyły <span style="color:#304FFE">wpływu systemu wyborczego</span> na:</p>
 <ul>
-<li>Wskaźniki <span style="color:#FFAB00">agregatowe</span> (np . <em>GHI</em>)</li>
+<li>dysproporcjonalność wyborczą,</li>
+<li>poziom fragmentacji parlamentarnego systemu partyjnego.</li>
 </ul>
-<p><span class="math inline">\(GHI = \sqrt{1/2 \times \Sigma_k^l (\frac{s_k}{TS} - \frac{v_k}{TV})^2}, \text{ for } k = 1, ..., l\)</span></p>
+</section><section id="symulacja-komputerowa-w-badaniach-wyborczych" class="slide level2">
+<h2>Symulacja komputerowa w badaniach wyborczych</h2>
+<p>Metoda symulacyjna umożliwia <span style="color:#304FFE"><em>replikację</em></span> ważnych, ale czasami dyskusyjnych, badań:</p>
 <ul>
-<li>Wskaźniki <span style="color:#FFAB00">‘indywidualne’</span> (<em>seat excess</em>, <em>seat bias</em>)</li>
+<li>Benoit, K. (2000). <em>Which Electoral Formula Is the Most Proportional? A New Look with New Evidence</em>. Political Analysis;</li>
+<li>Carey, J. M., &amp; Hix, S. (2011). <em>The Electoral Sweet Spot: Low-Magnitude Proportional Electoral Systems</em>. American Journal of Political Science.</li>
 </ul>
-<p><span class="math inline">\(SB^2_k(TS) = E[\frac{s_i}{TS} - \frac{v_i}{TV} \mid \frac{v_1}{TV} \geq \frac{v_2}{TV} \geq ... \geq \frac{v_l}{TV} \geq 0]\)</span></p>
-</section><section id="metoda---symulacja-komputerowa-1" class="slide level2">
-<h2>Metoda - symulacja komputerowa (1)</h2>
+</section><section id="symulacja-komputerowa-w-badaniach-wyborczych-2" class="slide level2">
+<h2>Symulacja komputerowa w badaniach wyborczych (2)</h2>
+<p>Wykorzystując symulację komputerową <em>Monte Carlo</em>, można m.in. badać <span style="color:#304FFE"><strong>‘czysto’</strong> <em>mechaniczny</em></span> wpływ:</p>
+<ul>
+<li>formuły wyborczej,</li>
+<li>wielkości okręgu wyborczego,</li>
+</ul>
+<p>na poziom <strong>dysproporcjonalności</strong> wyborczej.</p>
+</section><section id="symulacja-komputerowa-w-badaniach-wyborczych-3" class="slide level2">
+<h2>Symulacja komputerowa w badaniach wyborczych (3)</h2>
+<p><strong>Metoda symulacyjna</strong> umożliwia <strong>wyizolowanie</strong> wpływu na <em>dysproporcjonalność</em> wyborczą lub <em>fragmentację</em> parlamentu pojedynczego czynnika (np. wielkość okręgów wyborczych) - założenie <em>ceteris paribus</em>.</p>
+<p>Stosując symulację komputerową można dość łatwo <em>kontrolować</em> istotne <span style="color:#304FFE">zmienne moderujące</span>, takie jak:</p>
+<ul>
+<li>liczba partii rywalizujących w okręgu,</li>
+<li>rozkład głosów w okręgu.</li>
+</ul>
+</section><section id="dysproporcjonalnosc-dm" class="slide level2">
+<h2>Dysproporcjonalność ~ <em>DM</em></h2>
+<p><img src="img/relationships2.svg" alt="Drawing" style="width:100%; background-color:#D1C4E9; padding:20px; border:none; box-shadow:none;"></p>
+</section><section id="przykad" class="slide level2">
+<h2>Przykład</h2>
+<p>W badaniu Carey i Hixa (2011), autorzy przewartościowują znaczenie …, ponieważ …</p>
+</section><section id="symulacja-komputerowa-w-badaniach-wyborczych-4" class="slide level2">
+<h2>Symulacja komputerowa w badaniach wyborczych (4)</h2>
 <p>Symulacja komputerowa pozwala odseparować <em>czysto</em> <span style="color:#FFAB00">mechaniczne</span> efekty systemu wyborczego od tzw. efektów <span style="color:#FFAB00">psychologicznych</span>.</p>
-<p>Założenie <em>ceteris paribus</em></p>
-</section><section id="metoda---symulacja-komputerowa-2" class="slide level2">
-<h2>Metoda - symulacja komputerowa (2)</h2>
-<p><span style="color:#FFAB00">Efekt <em>psychologiczny</em></span> jest odzwierciedlony przez kształt krzywej funkcji gęstości rozkładu prawdopodobieństwa, z której losowana jest próba zawierająca głosy oddane na <span class="math inline">\(l\)</span> ustalonych partii politycznych w <span class="math inline">\(n\)</span> elekcjach.</p>
-</section><section id="metoda---symulacja-komputerowa-3" class="slide level2">
-<h2>Metoda - symulacja komputerowa (3)</h2>
-<p>Symulacja komputerowa pozwala na precyzyjne prognozowania:</p>
+</section><section id="symulacja-komputerowa-w-badaniach-wyborczych-5" class="slide level2">
+<h2>Symulacja komputerowa w badaniach wyborczych (5)</h2>
+<p><span style="color:#FFAB00">Efekt <em>psychologiczny</em></span> odzwierciedlają:</p>
+<ul>
+<li>ustalona liczba <span class="math inline">\(l\)</span> rywalizujących w okręgu partii politycznych,</li>
+<li>kształt krzywej <em>funkcji gęstości rozkładu prawdopodobieństwa</em>, która wykorzystywana jest do losowania próby zawierającej głosy oddane na <span class="math inline">\(l\)</span> partii politycznych w <span class="math inline">\(n\)</span> elekcjach.</li>
+</ul>
+</section><section id="podstawowe-zalety-metody-symulacyjnej" class="slide level2">
+<h2>Podstawowe zalety metody symulacyjnej</h2>
+<ul>
+<li>pozwala na przeprowadzenie złożonej analizy <em>mechanicznych</em> efektów systemów reprezentacji proporcjonalnej (uwzględnienie różnorodnych kombinacji formuły wyborczej, wielkości okręgów, klauzuli zaporowej oraz liczby konkurujących w okręgu partii);</li>
+<li>umożliwia odseparowanie efektów <em>mechanicznych</em> od efektów <em>psychologicznych</em> systemu;</li>
+<li>pozwala badając efekt jednej zmiennej utrzymać pozostałe zmienne na stałym poziomie (<em>ceteris paribus</em>);</li>
+<li>daje możliwość łatwej replikacji lub reprodukcji badania.</li>
+</ul>
+</section><section id="podstawowe-zalety-metody-symulacyjnej-2" class="slide level2">
+<h2>Podstawowe zalety metody symulacyjnej (2)</h2>
+<p>Symulacja komputerowa pozwala na precyzyjne prognozowanie:</p>
 <ul>
 <li>odchyleń od proporcjonalności,</li>
 <li>liczby partii parlamentarnych,</li>
 <li>nadwyżki zwycięzcy itp.,</li>
 </ul>
-<p>dla <span style="color:#FFAB00">wielu konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.</p>
+<p>dla <span style="color:#FFAB00">różnorodnych konfiguracji parametrów</span> systemu wyborczego. W tym tych konfiguracji, które empirycznie nie były stosowane.</p>
+</section><section id="pytania-szczegoowe-1" class="slide level2">
+<h2>Pytania szczegółowe (1)</h2>
+<ul>
+<li>Czy istnieje optymalna kombinacja wielkości okręgu wyborczego oraz formuły wyborczej, która zapewnia równowagę między dysproporcjonalnością wyborczą i poziomem fragmentacji parlamentarnego systemu partyjnego (<em>electoral sweet-spot</em>)? Czy małe okręgi (4-8) są najlepsze? (Carey &amp; Hix, 2011)</li>
+</ul>
+</section><section id="pytania-szczegoowe-2" class="slide level2">
+<h2>Pytania szczegółowe (2)</h2>
+<ul>
+<li><p>Jak na proporcję głosów najmniejszej partii uzyskującej mandaty wpływają różne konfiguracje formuły wyborczej, wielkości okręgów i klauzuli zaporowej?</p></li>
+<li><p>Jak wpływają różne konfiguracje parametrów systemów reprezentacji proporcjonalnej na wysokość tzw. <em>nadwyżki partii zwycięskiej</em> (<em>seat excess</em> dla partii zwycięskiej)?</p></li>
+</ul>
+</section></section>
+<section><section id="symulator" class="titleslide slide level1"><h1>Symulator</h1></section><section id="projekt-aplikacji" class="slide level2">
+<h2>Projekt aplikacji</h2>
+<p>Aplikacja komputerowa zaprojektowana z użyciem języka programowania <strong>R</strong>: - pakiet <em>disprr</em> - wersja <em>alpha</em>; - wersja online (aplikacja w technologii <em>Shiny</em>): <a href="https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/" class="uri">https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/</a></p>
 </section><section id="podstawowe-cechy-symulacji" class="slide level2">
 <h2>Podstawowe cechy symulacji</h2>
 <p>Proces symulacji przebiega na <span style="color:#FFAB00">dwóch podstawowych etapach</span>:</p>
-</section><section id="i-etap-stochastyczny" class="slide level2">
-<h2>I Etap (stochastyczny)</h2>
+</section><section id="i-etap---stochastyczny" class="slide level2">
+<h2>I etap - stochastyczny</h2>
 <p>Symulator generuje <em>n</em> wektorów głosów ważnych, oddanych w okręgach, na <em>l</em> partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można <span class="math inline">\(TS\)</span> mandatów. Głosy oddane na partie losowane są np. z uciętego rozkładu <em>log-normalnego</em>: <span class="math display">\[v_i \sim lnN(\mu, \sigma, min = a, max = b)\]</span></p>
-</section><section id="ii-etap-deterministyczny" class="slide level2">
-<h2>II Etap (deterministyczny)</h2>
+</section><section id="ii-etap---deterministyczny" class="slide level2">
+<h2>II etap - deterministyczny</h2>
 <p>Symulator wykonuje operacje podziału dostępnych w okręgach mandatów między <em>l</em> partii politycznych, z użyciem ustalonych metod alokacji.</p>
-</section><section id="modele" class="slide level2">
-<h2>Modele</h2>
+</section><section id="przykadowe-ustawienia-symulacji" class="slide level2">
+<h2>Przykładowe ustawienia symulacji</h2>
+<p>Zbiór danych z symulatora zawiera:</p>
+<ul>
+<li>wektory głosów dla <span class="math inline">\(l = \{3, 6, 9, 12\}\)</span> partii, wylosowane z rozkładu log-normalnego (dla zmiennych parametrów),</li>
+<li>[dla] <span class="math inline">\(n = 500\)</span> elekcji (zakłada się istnienie 1 okręgu narodowego),</li>
+<li>[w] okręgach o wielkości od 2 do 20 mandatów.</li>
+</ul>
+<p>Dla wskazanych ustawień zbiór danych zawiera <span class="math inline">\(4 \times 500 \times 19\)</span> = <strong>38 000</strong> elekcji.</p>
+</section></section>
+<section><section id="analiza-danych-z-symulacji" class="titleslide slide level1"><h1>Analiza danych z symulacji</h1></section><section id="modele-dysproporcjonalnosc-wielkosc-okregu" class="slide level2">
+<h2>Modele: Dysproporcjonalność ~ Wielkość okręgu</h2>
 <ul>
 <li>Model <strong>wykładniczy</strong>:</li>
 </ul>
@@ -523,6 +569,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Model <strong>log-liniowy</strong>:</li>
 </ul>
 <p><span class="math display">\[ ln(GHI_i) = \beta_0 + \beta_1 \times DM_i + \beta_2 \times method_i + \beta_3 \times NP_i + \\ + \beta_4 \times DM_i \times method_i + \beta_5 \times DM_i \times NP_i + \epsilon_i \]</span></p>
+</section><section id="wizualizacja-dysproporcjonalnosc-dm-3" class="slide level2">
+<h2>Wizualizacja: Dysproporcjonalność ~ DM | 3</h2>
+<p><img src="img/ghi_np3.svg" alt="Drawing" style="width:76%;"></p>
+</section><section id="wizualizacja-dysproporcjonalnosc-dm-9" class="slide level2">
+<h2>Wizualizacja: Dysproporcjonalność ~ DM | 9</h2>
+<p><img src="img/ghi_np9.svg" alt="Drawing" style="width:76%;"></p>
 </section></section>
 <section><section id="pytania" class="titleslide slide level1"><h1>Pytania</h1></section><section id="pytania-1" class="slide level2">
 <h2>Pytania (1)</h2>
