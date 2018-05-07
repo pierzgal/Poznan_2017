@@ -543,7 +543,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section></section>
 <section><section id="symulator" class="titleslide slide level1"><h1>Symulator</h1></section><section id="projekt-aplikacji" class="slide level2">
 <h2>Projekt aplikacji</h2>
-<p>Aplikacja komputerowa zaprojektowana z użyciem języka programowania <strong>R</strong>: - pakiet <em>disprr</em> - wersja <em>alpha</em>; - wersja online (aplikacja w technologii <em>Shiny</em>): <a href="https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/" class="uri">https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/</a></p>
+<p>Aplikacja komputerowa zaprojektowana z użyciem języka programowania <strong>R</strong>:</p>
+<ul>
+<li>pakiet <em>disprr</em> - wersja <em>alpha</em>;</li>
+<li>wersja online (aplikacja w technologii <em>Shiny</em>): <a href="https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/" class="uri">https://polisci.shinyapps.io/disproportionality_of_apportionment_methods/</a></li>
+</ul>
 <p>Symulacja dotyczy <em>systemów reprezentacji proporcjonalnej</em>.</p>
 </section><section id="podstawowe-cechy-symulacji" class="slide level2">
 <h2>Podstawowe cechy symulacji</h2>
@@ -552,6 +556,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>I etap - stochastyczny</h2>
 <p>Symulator generuje <em>n</em> wektorów głosów ważnych, oddanych w okręgach, na <em>l</em> partii politycznych rywalizujących o głosy na poziomie okręgu wyborczego, w którym zdobyć można <span class="math inline">\(TS\)</span> mandatów.</p>
 <p>Głosy oddane na partie losowane są np. z uciętego rozkładu <em>log-normalnego</em>: <span class="math display">\[v_i \sim lnN(\mu, \sigma, min = a, max = b)\]</span></p>
+</section><section id="distributional-assumption" class="slide level2">
+<h2><em>Distributional assumption</em></h2>
 <p>Założenie dotyczące teoretycznego rozkładu prawdopodobieństwa opiera się na obserwacjach empirycznych rozkładów głosów w okręgach.</p>
 </section><section id="ii-etap---deterministyczny" class="slide level2">
 <h2>II etap - deterministyczny</h2>
