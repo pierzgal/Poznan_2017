@@ -14,6 +14,7 @@ output:
     self_contained: no
     theme: white
     transition: "slide"
+    use_math: true
 Version: 0.0.2
 ---
 
@@ -70,7 +71,7 @@ Stosując symulację komputerową można dość łatwo *kontrolować* istotne <s
 <img src="img/relationships2.svg" alt="Drawing" style="width:100%; background-color:#D1C4E9; padding:20px; border:none; box-shadow:none;">
 
 
-## Przykład 
+## Przykład
 
 W badaniu Carey i Hixa (2011), autorzy przewartościowują znaczenie ..., ponieważ ...
 
